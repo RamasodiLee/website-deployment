@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+{% extends 'main.html' %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    {% load static %}
+    <link type="text/css" rel="stylesheet" href="{% static '/css/index.css' %}">
+    <!-- Add icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+  {% block content %}
+
+    <div class="products">
+        <h3>Products</h3>
+        <H2>Poultry Farm Products</H2>
+    </div>
+      
+   
+      <div class="row">
+        {% for product in products %}
+        <div class="col-lg-4">
+          <img class="thumbnail" src="{{product.imageURL}}">
+          <div class="box-element product">
+            <h6><strong>{{product.name}}</strong></h6>
+            <hr>
+    
+            <button data-product={{product.id}} data-action="add" class="btn btn-outline-secondary add-btn update-cart">Add to Cart</button>
+            
+            <a class="btn btn-outline-info" href="#">View</a>
+            <h4 style="display: inline-block; "><strong>R{{product.price|floatformat:2}}</strong></h4>
+            
+          </div>
+        </div>
+        {% endfor %}
+          
+      </div>
+    
+
+
+
+  
+    
+    <footer class="foot">
+   
+      <div class ="socials">
+       <h6>follows us:</h6>
+       <a href="#" class="fa fa-facebook"></a>
+       <a href="#" class="fa fa-twitter"></a>
+       <a href="#" class="fa fa-instagram"></a>
+     </div>
+   
+     <div class="contact-sec">
+       <h4>Contact Us</h4>
+       <ul>
+         <li>Address: xxx mashroom street,pretoria </li>
+         <li>Contacts: 012 3456 789</li>
+         <li>Email:Lee@gmail.com</li>
+       
+       </ul>
+   <p> © Copyright 2022 POULTRYFARM All Rights Reserved.</p>
+     </div>
+     </footer>
+
+
+     {% endblock content%}
+
+</body>
+</html>

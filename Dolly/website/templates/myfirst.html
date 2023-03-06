@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+{% extends 'main.html' %}
+
+<html>
+
+<head>
+{% load static %}
+
+
+
+<link type="text/css" rel="stylesheet" href="{% static '/css/index.css' %}">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+</head>
+
+<body>
+  {% block content %}
+<!-- THE NAVBAR -->
+
+
+<!-- Add icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+ <div class="video">
+  <video autoplay loop src="{%static '/images/crazy2.mp4'%}"></video>
+ </div>
+   
+
+<div class="about">
+
+  <h3>Why choose us</h3>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro culpa velit natus quos
+     aliquam esse deserunt quisquam excepturi eligendi, 
+    at saepe vitae quibusdam a reprehenderit nobis omnis molestiae voluptates dolorum.
+  Et architecto numquam neque reiciendis doloribus assumenda iste, 
+  culpa nihil quidem nostrum iusto quia aut praesentium expedita,
+   ducimus commodi suscipit itaque? Nesciunt mollitia temporibus saepe cupiditate a obcaecati eveniet vel!
+  Veniam aperiam, cumque et possimus ab quis blanditiis doloribus hic! Doloribus
+   nam sit voluptatum assumenda debitis alias vitae neque illo suscipit eum,
+   eligendi, iure nihil vero ex quam voluptas impedit?
+  Quaerat dicta quod nisi quos culpa, vitae facilis reiciendis quam a corrupti, 
+  molestiae fugit itaque veritatis expedita, laboriosam velit unde mollitia beatae
+   harum fugiat quibusdam. Iusto illum atque ea quo?
+  </p>
+  <img src="http://127.0.0.1:8000/static/images/chicken1.jpg">
+  <img src="http://127.0.0.1:8000/static/images/chickengal2.jpg">
+  <img src="http://127.0.0.1:8000/static/images/eating.jpg">
+
+  <img src="http://127.0.0.1:8000/static/images/eat.jpg">
+  <img src="http://127.0.0.1:8000/static/images/chii.jpg">
+  <img src="http://127.0.0.1:8000/static/images/poultry-2.jpg">
+
+</div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  
+  <!-- CONTACT-SECTION -->
+  <div class="containerS">
+    <form action="action_page.php">
+  
+      <label for="fname">First Name</label>
+      <input type="text" id="fname" name="firstname" placeholder="Your name">
+  
+      <label for="lname">Last Name</label>
+      <input type="text" id="lname" name="lastname" placeholder="Your last name">
+
+      <!-- <label for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="Enter email" >
+    -->
+      <label for="country">Country</label>
+      <select id="country" name="country">
+        <option value="australia">South Africa</option>
+        <option value="canada">Zimbabwe</option>
+        <option value="usa">USA</option>
+      </select>
+  
+      <label for="subject">Subject</label>
+      <textarea id="subject" name="subject" placeholder="Write something" style="height:200px"></textarea>
+  
+      <input type="submit" value="Submit">
+  
+    </form>
+  </div>
+  
+
+
+ 
+
+
+
+ 
+  <h3>Testimonials</h3>
+<div class="test">
+<div class ="test-1">
+  <h6>Dorah Molefe</h6>
+  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae, veniam libero inventore ipsum
+     cupiditate exercitationem necessitatibus, voluptatibus totam fugiat doloremque numquam sed dolores
+      omnis hic, perspiciatis ut ex blanditiis nihil.
+    Dolore voluptatibus magni et minima accusamus? Labore facilis itaque nobis corporis eos ipsam dolores 
+   </p>
+ 
+</div>
+<div class ="test-1">
+  <h6>Lerato Love</h6>
+<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae, veniam libero inventore ipsum cupiditate 
+   voluptatibus totam fugiat doloremque numquam sed dolores omnis hic, perspiciatis ut ex blanditiis nihil.
+   Dolore voluptatibus magni et minima accusamus? Labore facilis itaque nobis corporis eos ipsam dolores
+   </p>
+
+  </div>
+<div class ="test-1">
+  <h6>Mamonwana See</h6>
+  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae, veniam libero inventore ipsum cupiditate
+    exercitationem necessitatibus, voluptatibus totam fugiat doloremque numquam sed dolores omnis hic, perspiciatis 
+    Dolore voluptatibus magni et minima accusamus? Labore facilis itaque nobis corporis eos ipsam dolores molestias 
+ </p>
+    
+</div>
+
+</div>
+
+<div class="fe-container">
+
+  <div>
+    <img src="{%static '/images/features/f1.png'%}" alt="">
+    <h6>Free shipping</h6>
+  </div>
+
+  <div >
+    <img src="{%static '/images/features/f2.png'%}" alt="">
+    <h6>Online Order</h6>
+  </div>
+  <div>
+    <img src="{%static '/images/features/f3.png'%}" alt="">
+    <h6>Save Money</h6>
+  </div>
+  <div>
+    <img src="{%static '/images/features/f4.png'%}" alt="">
+    <h6>Promotions</h6>
+  </div>
+  <div>
+    <img src="{%static '/images/features/f5.png'%}" alt="">
+    <h6>Happy Sell</h6>
+  </div>
+  <div>
+    <img src="{%static '/images/features/f6.png'%}" alt="">
+    <h6>24/7 Support</h6>
+  </div>
+</div>
+
+</body>
+
+
+
+
+  <footer class="foot">
+
+   <div class ="socials">
+    <h6>follows us:</h6>
+    <a href="#" class="fa fa-facebook"></a>
+    <a href="#" class="fa fa-twitter"></a>
+    <a href="#" class="fa fa-instagram"></a>
+  </div>
+
+  <div class="contact-sec">
+    <h4>Contact Us</h4>
+    <ul>
+      <li>Address: xxx mashroom street,pretoria </li>
+      <li>Contacts: 012 3456 789</li>
+      <li>Email:Lee@gmail.com</li>
+    
+    </ul>
+<p> © Copyright 2022 POULTRYFARM All Rights Reserved.</p>
+  </div>
+  </footer>
+  {% endblock content%}
+</body>
+
+</html>
